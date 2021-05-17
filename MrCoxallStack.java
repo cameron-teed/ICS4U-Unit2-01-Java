@@ -24,4 +24,9 @@ public class MrCoxallStack {
   public void push(final int pushNumber) {
     stackAsArray.add(pushNumber);
   }
+  
+  public void showStack() {
+  	// Retrieves value from arraylist in MrCoxallStack
+    System.out.println("Pushed: " + stackAsArray);
+  }
 }
