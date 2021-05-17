@@ -41,10 +41,10 @@ public final class StackForm {
 
       // Pushes user input into arraylist in MrCoxallStack
       clasStack.push(numberChosen);
-      
+
       // call method
       clasStack.showStack();
-      
+
       System.out.println("\nDone");
 
     } catch (Exception e) {
