@@ -26,6 +26,15 @@ public class MrCoxallStack {
   }
 
   /**
+  * This method peeks the top number in the stack.
+  *
+  * @return peekNum
+  */
+  public int peek() {
+    return this.stackAsArray.get(stackAsArray.size() - 1);
+  }
+
+  /**
   * This method pops the top number of the array.
   * 
   * @return poppedNumber
@@ -34,19 +43,7 @@ public class MrCoxallStack {
     // Removes the top number in the stack and returns it
     int poppedNumber = this.stackAsArray.get(stackAsArray.size() - 1);
     stackAsArray.remove(stackAsArray.size() - 1);
-    return poppedNumber;
-  }
-
-  /**
-  * This method peeks the top number in the stack.
-  *
-  * @return peekNum
-  */
-  public int peek() {
-    // Gets the top number in the stack
-    int peekNum = 0;
-    peekNum = this.stackAsArray.get(stackAsArray.size() - 1);
-    return peekNum;
+    return this.stackAsArray.get(stackAsArray.size() - 1);
   }
 
   /**

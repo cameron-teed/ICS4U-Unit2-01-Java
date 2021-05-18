@@ -42,19 +42,20 @@ public final class StackForm {
         // Pushes user input into arraylist in MrCoxallStack
         clasStack.push(numberChosen);
       }
+
+      // Prints out the current stack
+      System.out.print("\nThe numbers in the stack: " + clasStack.showStack());
+      // Prints out the last number in the stack
+      System.out.print("\nPeeked: " + clasStack.peek());
+      // Prints out and removes the last number in the stack
+      System.out.print("\nPopped: " + clasStack.pop());
+      // Prints out the current stack
+      System.out.print("\nThe numbers in the new stack: " + clasStack.showStack());
+      System.out.println();
+      System.out.println("\nDone");
+
     } catch (Exception e) {
       System.out.println("\nInvalid Input. Try again.");
     }
-    // Prints out the current stack
-    System.out.print("\nThe numbers in the stack: " + clasStack.showStack());
-    // Prints out the last number in the stack
-    System.out.print("\nPeeked: " + clasStack.peek());
-    // Prints out and removes the last number in the stack
-    System.out.print("\nPopped: " + clasStack.pop());
-    // Prints out the current stack
-    System.out.print("\nThe numbers in the new stack: " + clasStack.showStack());
-    System.out.println();
-    System.out.println("\nDone");
-
   }
 }
