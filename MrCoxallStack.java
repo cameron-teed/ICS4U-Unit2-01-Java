@@ -31,17 +31,19 @@ public class MrCoxallStack {
   * @return poppedNumber
   */
   public int pop() {
+    // Removes the top number in the stack and returns it
     int poppedNumber = this.stackAsArray.get(stackAsArray.size() - 1);
     stackAsArray.remove(stackAsArray.size() - 1);
     return poppedNumber;
   }
-  
+
   /**
   * This method peeks the top number in the stack.
-  * 
+  *
   * @return peekNum
   */
   public int peek() {
+    // Gets the top number in the stack
     int peekNum = 0;
     peekNum = this.stackAsArray.get(stackAsArray.size() - 1);
     return peekNum;
@@ -49,13 +51,13 @@ public class MrCoxallStack {
 
   /**
   * This method prints out the stack.
-  * 
+  *
   * @return userStack
   */
   public String showStack() {
+    // Adds the elements in the array to a string and returns it
     String userStack = "";
     for (int counter = 0; counter != stackAsArray.size(); counter++) {
-      // Retrieves value from arraylist in MrCoxallStack
       if (counter != stackAsArray.size() - 1) {
         userStack = userStack + stackAsArray.get(counter) + ", ";
       } else {
