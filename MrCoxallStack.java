@@ -31,19 +31,19 @@ public class MrCoxallStack {
   * @return peekNum
   */
   public int peek() {
-    return this.stackAsArray.get(stackAsArray.size() - 1);
+    return stackAsArray.get(stackAsArray.size() - 1);
   }
 
   /**
   * This method pops the top number of the array.
-  * 
+  *
   * @return poppedNumber
   */
   public int pop() {
     // Removes the top number in the stack and returns it
     int poppedNumber = this.stackAsArray.get(stackAsArray.size() - 1);
     stackAsArray.remove(stackAsArray.size() - 1);
-    return this.stackAsArray.get(stackAsArray.size() - 1);
+    return poppedNumber;
   }
 
   /**

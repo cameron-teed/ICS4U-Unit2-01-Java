@@ -26,15 +26,18 @@ public final class StackForm {
   */
   public static void main(final String[] args) {
 
+    // Declaring the vraible for user input
+    final int three = 4;
+
     // create scanner object
     Scanner userInput = new Scanner(System.in);
 
     // references MrCoxallStack file
     MrCoxallStack clasStack = new MrCoxallStack();
-    
+
     try {
       // receive user input
-      for (int counter = 0; counter < 4; counter++) {
+      for (int counter = 0; counter < three; counter++) {
         System.out.println("Enter an integer to push onto the stack: ");
         int numberChosen = userInput.nextInt();
         System.out.println();
@@ -44,13 +47,13 @@ public final class StackForm {
       }
 
       // Prints out the current stack
-      System.out.print("\nThe numbers in the stack: " + clasStack.showStack());
+      System.out.print("The numbers in the stack: " + clasStack.showStack());
       // Prints out the last number in the stack
       System.out.print("\nPeeked: " + clasStack.peek());
       // Prints out and removes the last number in the stack
       System.out.print("\nPopped: " + clasStack.pop());
       // Prints out the current stack
-      System.out.print("\nThe numbers in the new stack: " + clasStack.showStack());
+      System.out.print("\nThe numbers in the stack: " + clasStack.showStack());
       System.out.println();
       System.out.println("\nDone");
 
