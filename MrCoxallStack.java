@@ -26,10 +26,42 @@ public class MrCoxallStack {
   }
 
   /**
-  * This method prints out the stack.
+  * This method pops the top number of the array.
+  * 
+  * @return poppedNumber
   */
-  public void showStack() {
-    // Retrieves value from arraylist in MrCoxallStack
-    System.out.println("Pushed: " + stackAsArray);
+  public int pop() {
+    int poppedNumber = this.stackAsArray.get(stackAsArray.size() - 1);
+    stackAsArray.remove(stackAsArray.size() - 1);
+    return poppedNumber;
+  }
+  
+  /**
+  * This method peeks the top number in the stack.
+  * 
+  * @return peekNum
+  */
+  public int peek() {
+    int peekNum = 0;
+    peekNum = this.stackAsArray.get(stackAsArray.size() - 1);
+    return peekNum;
+  }
+
+  /**
+  * This method prints out the stack.
+  * 
+  * @return userStack
+  */
+  public String showStack() {
+    String userStack = "";
+    for (int counter = 0; counter != stackAsArray.size(); counter++) {
+      // Retrieves value from arraylist in MrCoxallStack
+      if (counter != stackAsArray.size() - 1) {
+        userStack = userStack + stackAsArray.get(counter) + ", ";
+      } else {
+        userStack = userStack + stackAsArray.get(counter);
+      }
+    }
+    return userStack;
   }
 }

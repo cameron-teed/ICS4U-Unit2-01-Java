@@ -30,25 +30,26 @@ public final class StackForm {
     Scanner userInput = new Scanner(System.in);
 
     // ensures that user inputs only integer values
-    try {
-      // receive user input
-      System.out.println("Enter an integer to push onto the stack: ");
-      int numberChosen = userInput.nextInt();
-      System.out.println();
-
       // references MrCoxallStack file
-      MrCoxallStack clasStack = new MrCoxallStack();
+        MrCoxallStack clasStack = new MrCoxallStack();
+  
+      // receive user input
+      for (int counter = 0; counter < 4; counter++) {
+        System.out.println("Enter an integer to push onto the stack: ");
+        int numberChosen = userInput.nextInt();
+        System.out.println();
 
-      // Pushes user input into arraylist in MrCoxallStack
-      clasStack.push(numberChosen);
+        // Pushes user input into arraylist in MrCoxallStack
+        clasStack.push(numberChosen);
 
-      // call method
-      clasStack.showStack();
-
+        // call method
+      }
+      System.out.print("\nThe numbers in the stack: " + clasStack.showStack());
+      System.out.print("\nPeeked: " + clasStack.peek());
+      System.out.print("\nPopped: " + clasStack.pop());
+      System.out.print("\nThe numbers in the new stack: " + clasStack.showStack());
+      System.out.println();
       System.out.println("\nDone");
 
-    } catch (Exception e) {
-      System.out.println("Invalid Input");
-    }
   }
 }
